@@ -1,0 +1,188 @@
+html, body {
+  background-color: white;
+  max-width: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-size: 14pt;
+  font-family: "Arvo","Comic Sans MS", "sans-serif";
+  overflow-x: hidden;
+}
+
+.content {
+  max-width: 960px;
+  padding: 20px;
+  margin: auto;
+  font-size: 14pt;
+}
+
+.container-blue {
+  font-family: "Audiowide";
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: rgba(169, 169, 169, 0.5);
+  font-size: 24pt;
+  letter-spacing: 4px;
+}
+
+.container-gray {
+  padding-top: 67px;
+  padding-bottom: 67px;
+}
+
+.center-content {
+  text-align: center;
+}
+
+#container {
+  height: 300px;
+  font-size: 48px;
+  background-color: #001f3f;
+  position: relative;
+  font-family: "Audiowide";
+}
+
+.parallax {
+    background-image: url("baltimore.jpg");
+    min-height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.type {
+  color: white;
+  position: absolute;
+  height: auto;
+  width: 100%;
+  top: 25%;
+}
+
+img {
+  width: 150px;
+  border-radius: 50%;
+  border: 2px solid black;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.button {
+    background-color: #001f3f;
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.button:hover {
+  opacity: 0.7;
+}
+
+.project {
+  display: flex;
+}
+
+.project_right {
+  float: left;
+  width: 40%;
+  background-color: white;
+  padding: 50px 20px;
+}
+
+.project_left {
+  float:left;
+  width: 60%;
+  background-color: black;
+  color: white;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 2px;
+    border: 2px solid Gray;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: none;
+    overflow: scroll;
+}
+
+input[type=submit] {
+    background-color: #87CEFA;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type=submit]:hover {
+    background-color: #1E90FF;
+}
+
+
+#footer {
+  display:table;
+  width: 100%;
+  background-color: #001f3f;
+  color: white;
+  padding: 20px 0px;
+}
+
+.footerbox {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 10pt;
+  width: 33.333%;
+}
+
+.fa {
+  padding: 20px;
+ width: 20px;
+ text-align: center;
+ text-decoration: none;
+ margin: 5px 3%;
+ border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-github-square {
+  background-color:#6e5494;
+  color: white;
+}
+
+.fa-google-plus {
+  background-color:#d34836;
+  color: white;
+}
