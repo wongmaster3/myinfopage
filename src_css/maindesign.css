@@ -1,0 +1,226 @@
+html, body {
+  background-color: #EEEEEE;
+  max-width: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-size: 14pt;
+  font-family: "Arvo","Comic Sans MS", "sans-serif";
+  overflow-x: hidden;
+    color: black;
+}
+
+/* Style the Project. Note: hidden by default */
+.panel {
+    max-width: 960px;
+    padding: 20px 20px;
+    font-size: 14pt;
+    margin: auto;
+    /*max-height: 0px;*/
+    /*overflow: hidden;*/
+    /*transition: max-height 0.2s ease-out;*/
+}
+
+/* Container with summary */
+.first-content {
+  max-width: 960px;
+  padding: 20px;
+  margin: 0px auto;
+  font-size: 14pt;
+    position: relative;
+
+}
+
+.center-project-content {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* Beginning of button design. Design taken from here: https://codepen.io/onediv/pen/jEmjap?editors=1100 */
+.center-project-content .view-project-button {
+    background: #2D4059;
+    color:#EEEEEE;
+    border:none;
+    position:relative;
+    font-size:1.3em;
+    padding:10px;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+    text-decoration: none;
+}
+.view-project-button:hover{
+    background:#EEEEEE;
+    color:#2D4059;
+}
+.view-project-button:before,.view-project-button:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #2D4059;
+    transition:400ms ease all;
+}
+.view-project-button:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+}
+.view-project-button:hover:before,.view-project-button:hover:after{
+    width:100%;
+    transition:800ms ease all;
+}
+
+/* Old Design Below */
+/*.view-project-button {*/
+    /*padding: 10px; color: black;*/
+    /*text-decoration: none;*/
+    /*border: 2px solid black;*/
+/*}*/
+
+/* End of Button Design */
+
+/* First Container with typing animation*/
+#container {
+  height: 350px;
+  font-size: 48px;
+  background-color: #222831;
+  position: relative;
+  font-family: "Audiowide";
+}
+
+.type {
+    color: white;
+    position: absolute;
+    height: auto;
+    width: 100%;
+    top: 25%;
+}
+
+/* Parallax Effect */
+.parallax {
+    background-image: url("../Images/baltimore.jpg");
+    min-height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* My Profile Picture */
+img {
+  width: 175px;
+  border-radius: 50%;
+  border: 2px solid black;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  margin-bottom: 30px;
+}
+
+/* Resume Button */
+.button {
+    background-color: #2D4059;
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    width: 200px;
+    height: 60px;
+    border-radius: 15px;
+}
+
+.button:hover {
+  opacity: 0.7;
+}
+
+/* Project Container */
+#project-container {
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+}
+
+#project-title {
+    position:absolute;
+    top:25%;
+    right: 100px;
+    font-size: 48px;
+
+}
+
+/* Footer CSS Below */
+
+#footer {
+  display:table;
+  width: 100%;
+  background-color: #222831;
+  color: white;
+  padding: 20px 0px;
+}
+
+.footerbox {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 10pt;
+  width: 33.333%;
+}
+
+.footerbox .fa {
+  padding: 20px;
+ text-align: center;
+ text-decoration: none;
+ margin: 5px 3%;
+ border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-github-square {
+  background-color:#6e5494;
+  color: white;
+}
+
+/* Misc. */
+.center-content {
+    text-align: center;
+}
+
+.container-blue {
+    color: white;
+    font-family: "Audiowide";
+    /*padding-top: 50px;*/
+    /*padding-bottom: 50px;*/
+    background: #222831;
+    font-size: 24pt;
+    letter-spacing: 4px;
+    width: 100%;
+}
+
+.container-gray {
+    padding-top: 67px;
+    padding-bottom: 67px;
+}
+
+.list-group-item {
+    background-color: #F4F4F4;
+}
