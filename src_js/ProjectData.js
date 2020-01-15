@@ -1,5 +1,13 @@
 var data = {
-    "Projects":[{"ProjectName":"MeeshQuest (Fall 2018)",
+    "Projects":[{"ProjectName":"GoalKeeper (Fall 2019)",
+        "Description":"Created a full stack web application that keeps tracks of goals and is also a social media platform using Python, Flask, SQLAlchemy, and Docker. Also, we incorporated a CI/CD pipeline using gitlab runners.",
+        "ReferenceLink":"https://github.com/wongmaster3/GoalKeeper"},
+
+        {"ProjectName":"Analyzing Citibike Data (Fall 2019)",
+            "Description":"In this project, we analyzed different Citibike data trends using Python and its data science libraries (numpy, sklearn, etc.)",
+            "ReferenceLink":"https://arunsrinivas20.github.io/"},
+
+      {"ProjectName":"MeeshQuest (Fall 2018)",
         "Description":"Developed a low-key MapQuest in one of my classes (CMSC420 Data Structures) using Java. Data Structures used were PR/PM-QuadTrees, and AVL Trees. Functionalities include finding nearest neighbor, nearest road, and more. The program takes in a XML file which then I have to parse and generate a map with the data. Feel free to contact me if you want to look at the code.",
         "ReferenceLink":"Data Not Available at this Time"},
 
