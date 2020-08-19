@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<!--
+Strata by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<div class="mat-app-background basic-container" *ngIf=loading>
+		<mat-spinner
+		[color]="color"
+		[mode]="mode"
+		[value]="value">
+		</mat-spinner>
+</div>
+
+
+<body *ngIf="!loading">
+
+<!-- Header -->
+	<header id="header">
+		<div class="inner">
+			<a href="#" class="image avatar"><img src="assets/images/mattwong.jpg" alt="" /></a>
+			<h1><strong>My name is Matt</strong>, <br /> a developer, <br />
+			an explorer, <br />
+			a musician, <br />
+			a gamer</h1>
+		</div>
+		<footer id="footer" *ngIf="!footerAtEndPlacement">
+			<div class="inner">
+				<ul class="icons">
+					<li><a (click)="goToUrl('https://www.linkedin.com/in/matthew-wong-0b14b1132/')" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+					<li><a (click)="goToUrl('https://github.com/wongmaster3')" class="icon brands fa-github"><span class="label">Github</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Matthew Wong 2020</li>
+					<li>matw81@gmail.com</li>
+					<li>631-740-0073</li>
+				</ul>
+			</div>
+		</footer>
+	</header>
+
+<!-- Main -->
+	<div id="main">
+
+		<!-- One -->
+			<section id="one">
+				<header class="major">
+					<h2>About Me</h2>
+				</header>
+				<p>My name is Matt. I am currently a computer science graduate student at the University of Maryland, College Park. 
+					I earned my Bachelor's in Computer and Applied Mathematics in May 2020.
+					I am an avid learner and persistent in solving challenging problems.
+					Some of my hobbies also include biking, hiking, running,
+					and gaming. Furthermore, I have been a violinist and pianist for about 14 years.
+					Thanks for visiting my page and if you have any questions feel free to contact me. <br>
+					<a>Check out my Resume >></a></p>
+					<div class="container">
+							<div class="row">
+								<div class="col-sm">
+									<br> Some Languages I Use:
+									<ul class="alt">
+										<li>+ Java</li>
+										<li>+ C</li>
+										<li>+ JS</li>
+										<li>+ Python</li>
+									</ul>
+								</div>
+								<div class="col-sm">
+									<br> Some Frameworks I Know:
+									<ul class="alt">
+										<li>+ Angular</li>
+										<li>+ Bootstrap</li>
+										<li>+ Selenium</li>
+										<li>+ Java TestNG</li>
+									</ul>
+								</div>
+								<div class="col-sm">
+									<br> Some Relevant Courses:
+									<ul class="alt">
+										<li>+ Linear Algebra</li>
+										<li>+ Algorithms</li>
+										<li>+ Database Design</li>
+										<li>+ Computer Graphics</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+				<!-- <ul class="actions" id="resume">
+					<li><a href="#" class="button">Resume</a></li>
+				</ul> -->
+			</section>
+
+			<!-- <section id="two">
+				<app-work-experiences></app-work-experiences>
+			</section> -->
+
+		<!-- Two -->
+			<section id="three">
+				<app-projects></app-projects>
+			</section>
+
+		<!-- Three -->
+			<!-- <section id="four">
+				<app-contact></app-contact>
+			</section> -->
+	</div>
+
+<!-- Footer -->
+	<footer id="footer" *ngIf="footerAtEndPlacement">
+		<div class="inner">
+			<ul class="icons">
+				<li><a (click)="goToUrl('https://www.linkedin.com/in/matthew-wong-0b14b1132/')" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+				<li><a (click)="goToUrl('https://github.com/wongmaster3')" class="icon brands fa-github"><span class="label">Github</span></a></li>
+			</ul>
+			<ul class="copyright">
+				<li>&copy; Matthew Wong 2020</li>
+				<li>matw81@gmail.com</li>
+				<li>631-740-0073</li>
+			</ul>
+		</div>
+	</footer>
+
+<!-- Scripts -->
+	<!-- <script src="assets/js/main-dev.js"></script> -->
+	<!-- <script src="assets/js/jquery.poptrox.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script> -->
+
+</body>
