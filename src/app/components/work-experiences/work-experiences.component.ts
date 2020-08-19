@@ -6,7 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./work-experiences.component.css']
 })
 export class WorkExperiencesComponent implements OnInit {
-
+  experiences = [
+    { title: "Software Engineer Intern",
+      dates: "August"
+    }
+  ];
+    
   constructor() { }
 
   ngOnInit() {
