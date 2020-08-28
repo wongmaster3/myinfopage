@@ -376,8 +376,8 @@ if (content.locals) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/MattWong/Desktop/myinfopage/src/styles.css */"./src/styles.css");
-module.exports = __webpack_require__(/*! /Users/MattWong/Desktop/myinfopage/node_modules/bootstrap/dist/css/bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
+__webpack_require__(/*! /home/mwong/git-dev/myinfopage/src/styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! /home/mwong/git-dev/myinfopage/node_modules/bootstrap/dist/css/bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
 
 
 /***/ })
