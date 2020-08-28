@@ -21,7 +21,7 @@ export class ProjectsComponent implements OnInit {
     },
     {
         name: 'Analyzing Citybike Data',
-        description: 'In this project, we analyzed different Citibike data trends using Python and its data science libraries (numpy, sklearn, etc.)',
+        description: 'In this project, we found, analyzed, and visualized NYC Citibike data to find the most dense source and destination stations, the different types of riders, and much more. We also created a model to predict the gender of the rider and performed cross validation on it. The technologies used were Python and its data science libraries (numpy, sklearn, etc.)',
         link: 'https://github.com/arunsrinivas20/arunsrinivas20.github.io'
     },
     {
@@ -30,7 +30,7 @@ export class ProjectsComponent implements OnInit {
     },
     {
         name: 'Personal Website',
-        description: 'My own personal information website created using HTML, CSS, JS, React, and Bootstrap. Created from scratch, but some cool effects are taken from online and sourced appropriately. The website is updated annually.',
+        description: 'My own personal information website created using HTML, CSS, JS, Angular, and Bootstrap. Created from scratch, but some cool effects are taken from online and sourced appropriately. The website is updated annually.',
         link: 'https://github.com/wongmaster3/myinfopage'
     },
     {
