@@ -12,7 +12,8 @@ export class ProjectsComponent implements OnInit {
   projects: any[] = [
     {
       name: 'Nori Ray Tracer',
-      description: 'Used C++, Monte Carlo Integration, and importance sampling, I extended the nori ray tracer base code to render images using Unidirectional/Bidirectional Ray Tracing techniques for diffuse and specular objects.'
+      description: 'Used C++, Monte Carlo Integration, and importance sampling, I extended the nori ray tracer base code to render images using Unidirectional/Bidirectional Ray Tracing techniques for diffuse and specular objects.',
+      link: 'assets/CMSC740_FinalProject.pdf'
     },
     {
         name: 'GoalKeeper',
