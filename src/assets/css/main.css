@@ -117,7 +117,7 @@ input, select, textarea {
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #49bf9d !important;
+			color: black !important;
 			text-decoration: none;
 			cursor: pointer;
 		}
@@ -2595,7 +2595,7 @@ input, select, textarea {
 		justify-content: space-between;
 		/* background-color: #1f1815; */
 		background-attachment: scroll,								scroll;
-		background-image: url("../images/coal.jpg");
+		background-image: url("../images/rock.jpg");
 		background-position: top left,							top left;
 		/* background-repeat: repeat,		 						no-repeat; */
 		background-size: cover,								150%;
@@ -3080,7 +3080,7 @@ input, select, textarea {
 			#footer {
 				/* background-attachment: scroll; */
 				background-color: #1f1815;
-				background-image: url("../images/coal.jpg");
+				background-image: url("../images/rock.jpg");
 				/* background-position: top left,						bottom center; */
 				/* background-repeat: repeat,							no-repeat; */
 				/* background-size: auto,							cover; */

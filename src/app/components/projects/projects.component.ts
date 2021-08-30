@@ -1,6 +1,4 @@
-import { Component, OnInit, Input, Renderer2} from '@angular/core';
-import { DOCUMENT } from '@angular/common';
-import { Subject } from 'rxjs'
+import { Component } from '@angular/core';
 import { Utils } from '../../shared/utils/utils';
 
 @Component({
@@ -8,8 +6,13 @@ import { Utils } from '../../shared/utils/utils';
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.css']
 })
-export class ProjectsComponent implements OnInit {
+export class ProjectsComponent {
   projects: any[] = [
+    {
+      name: 'SharedSpace',
+      description: 'Used angular, node, and mediasoup to develop a video conferencing system with spatial audio and video formats. Worked on this during my Masters at the University of Maryland College Park.',
+      link: 'https://realrooms.visisonics.com'
+    },
     {
       name: 'Nori Ray Tracer',
       description: 'Used C++, Monte Carlo Integration, and importance sampling, I extended the nori ray tracer base code to render images using Unidirectional/Bidirectional Ray Tracing techniques for diffuse and specular objects.',
@@ -31,7 +34,7 @@ export class ProjectsComponent implements OnInit {
     },
     {
         name: 'Personal Website',
-        description: 'My own personal information website created using HTML, CSS, JS, Angular, and Bootstrap. Created from scratch, but some cool effects are taken from online and sourced appropriately. The website is updated annually.',
+        description: 'My own personal information website created using HTML, CSS, JS, Angular, and Bootstrap. The website is updated annually.',
         link: 'https://github.com/wongmaster3/myinfopage'
     },
     {
@@ -46,12 +49,7 @@ export class ProjectsComponent implements OnInit {
     }
 ];
 
-  constructor(private renderer: Renderer2) {
-   }
-
-  ngOnInit() {
-    
-  }
+  constructor() {}
 
   goToUrl(url: string) {
     Utils.goToUrl(url);

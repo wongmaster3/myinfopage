@@ -4,13 +4,6 @@ Strata by HTML5 UP
 html5up.net | @ajlkn
 Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<div class="mat-app-background basic-container" *ngIf=loading>
-		<mat-spinner
-		[color]="color"
-		[mode]="mode"
-		[value]="value">
-		</mat-spinner>
-</div>
 
 
 <body *ngIf="!loading">
@@ -19,10 +12,9 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 	<header id="header">
 		<div class="inner">
 			<a href="#" class="image avatar"><img src="assets/images/mattwong.jpg" alt="" /></a>
-			<h1><strong>My name is Matt</strong> 
-				<br> a developer
-				<br> a musician
-			<br> a globetrotter</h1>
+			<h1><strong>Matt Wong</strong> 
+				<br> Software Engineer 
+				<br> @AWS EMR</h1>
 		</div>
 		<footer id="footer" *ngIf="!footerAtEndPlacement">
 			<div class="inner">
@@ -31,7 +23,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 					<li><a (click)="goToUrl('https://github.com/wongmaster3')" class="icon brands fa-github"><span class="label">Github</span></a></li>
 				</ul>
 				<ul class="copyright">
-					<li>&copy; Matthew Wong 2020</li>
+					<li>&copy; Matthew Wong 2021</li>
 					<li>matw81@gmail.com</li>
 					<li>631-740-0073</li>
 				</ul>
@@ -47,13 +39,23 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 				<header class="major">
 					<h2>About Me</h2>
 				</header>
-				<p>My name is Matt. I am currently a Computer Science graduate student at the University of Maryland, College Park (UMD). 
-					In May 2020, I earned my Bachelor's Degree in Computer Science and Applied Mathematics (from UMD as well). 
-					At UMD, I was a teaching assistant for CMSC411 Computer Architecture, CMSC420 Advanced Data Structures,
-					 CMSC330 Organization of Programming Languages, and ENAE380 Introduction to Flight Systems. I am an avid learner and love solving challenging problems.
-					In my free time, I love to bike, hike, run, play the violin and piano, and game.
-					Thanks for visiting my page and if you have any questions feel free to contact me. <br>
-					<a href="assets/UpdatedResume_2020.pdf">Check out my Resume >></a></p>
+				<div>My name is Matt. I am currently a Software Engineer at Amazon Web Services working on <a href="https://aws.amazon.com/emr">EMR</a>. I have experience with full stack development
+					and have launched applications in the cloud. Feel free to reach out if you have any questions.
+					<a href="assets/UpdatedResume_2020.pdf">Check out my Resume >></a></div>
+					<br>
+					Education:
+					<div class="container">
+							<div class="row">
+								<div class="col">
+									<strong>Bachelors Degree (Graduated May 2020)</strong> in Computer Science and Applied Mathematics
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<strong>Masters Degree (Graduated May 2021)</strong> in Computer Science
+								</div>
+							</div>
+					</div>
 					<div class="container">
 							<div class="row">
 								<div class="col-sm">
@@ -70,8 +72,8 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 									<ul class="alt">
 										<li>+ Angular</li>
 										<li>+ Bootstrap</li>
+										<li>+ TensorFlow</li>
 										<li>+ Selenium</li>
-										<li>+ Java TestNG</li>
 									</ul>
 								</div>
 								<div class="col-sm">
@@ -85,24 +87,12 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 								</div>
 							</div>
 						</div>
-				<!-- <ul class="actions" id="resume">
-					<li><a href="#" class="button">Resume</a></li>
-				</ul> -->
 			</section>
-
-			<!-- <section id="two">
-				<app-work-experiences></app-work-experiences>
-			</section> -->
 
 		<!-- Two -->
-			<section id="three">
+			<section id="two">
 				<app-projects></app-projects>
 			</section>
-
-		<!-- Three -->
-			<!-- <section id="four">
-				<app-contact></app-contact>
-			</section> -->
 	</div>
 
 <!-- Footer -->
@@ -113,19 +103,11 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 				<li><a (click)="goToUrl('https://github.com/wongmaster3')" class="icon brands fa-github"><span class="label">Github</span></a></li>
 			</ul>
 			<ul class="copyright">
-				<li>&copy; Matthew Wong 2020</li>
+				<li>&copy; Matthew Wong 2021</li>
 				<li>matw81@gmail.com</li>
 				<li>631-740-0073</li>
 			</ul>
 		</div>
 	</footer>
-
-<!-- Scripts -->
-	<!-- <script src="assets/js/main-dev.js"></script> -->
-	<!-- <script src="assets/js/jquery.poptrox.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script> -->
 
 </body>

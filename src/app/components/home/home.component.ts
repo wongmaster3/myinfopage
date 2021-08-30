@@ -7,16 +7,11 @@ import { Utils } from '../../shared/utils/utils';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-profileImage: string;
 footerAtEndPlacement = false;
 loading = true;
-color = 'primary';
-mode = 'determinate';
-value = 50;
 
 @HostListener('window:resize', ['$event'])
-onResize(event) {
+onResize() {
   if (window.innerWidth > 980) {
     this.footerAtEndPlacement = false;
   } else {
@@ -24,9 +19,7 @@ onResize(event) {
   }
 }
 
-  constructor() { 
-    this.profileImage = 'assets/images/mattwong.jpg';
-  }
+  constructor() {}
 
   ngOnInit() {
     if (window.innerWidth > 980) {

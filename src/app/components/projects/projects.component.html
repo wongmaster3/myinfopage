@@ -5,10 +5,5 @@
                 <p>{{ project.description }} <br> 
                     <a (click)="goToUrl(project.link)" *ngIf="project.link != null">Check it out >></a>
                     <span id="warning" *ngIf="project.link == null"><< Email me for the code >> </span> </p>
-                    <!-- <span *ngIf="project.documents != null"> | </span>
-                    <a href='project.documents.path' *ngIf="project.documents != null">{{ project.documents.title }} >></a>  </p> -->
     </article>
 </div>
-<!-- <ul class="actions">
-    <li (onclick)="viewAll()"><a class="button">Full Portfolio</a></li>
-</ul> -->
