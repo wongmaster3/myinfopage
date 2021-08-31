@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "myinfopage-updated": {
+    "myinfopage": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/myinfopage-updated",
+            "outputPath": "dist/myinfopage",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "myinfopage-updated:build:production"
+              "browserTarget": "myinfopage:build:production"
             },
             "development": {
-              "browserTarget": "myinfopage-updated:build:development"
+              "browserTarget": "myinfopage:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "myinfopage-updated:build"
+            "browserTarget": "myinfopage:build"
           }
         },
         "test": {
@@ -103,5 +103,5 @@
       }
     }
   },
-  "defaultProject": "myinfopage-updated"
+  "defaultProject": "myinfopage"
 }
