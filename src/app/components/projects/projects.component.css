@@ -1,9 +1,5 @@
 @import url('../../../assets/css/main.css');
 
-#warning {
-    color: red;
+.type {
+    color: #0047AB !important;
 }
-
-/* a {
-    color: #49bf9d !important;
-} */

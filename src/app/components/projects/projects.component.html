@@ -3,10 +3,10 @@
     <article class="col-6 col-12-xsmall work-item" *ngFor="let project of projects">
                 <h3>{{ project.name }}</h3>
                 <p>{{ project.description }} <br> 
-                    <a (click)="goToUrl(project.code)" *ngIf="project.code != null">Code >><br></a>
-                    <a (click)="goToUrl(project.paper)" *ngIf="project.paper != null">Paper >><br></a>
-                    <a (click)="goToUrl(project.demo)" *ngIf="project.demo != null">Demo >><br></a>
-                    <a (click)="goToUrl(project.article)" *ngIf="project.article != null">Featured Article >></a>
-                    <span id="warning" *ngIf="project.code == null && project.paper == null && project.demo == null && project.article == null"><< No source available at this time >> </span> </p>
+                    <a class="type" (click)="goToUrl(project.code)" *ngIf="project.code != null">Code >><br></a>
+                    <a class="type" (click)="goToUrl(project.paper)" *ngIf="project.paper != null">Paper >><br></a>
+                    <a class="type" (click)="goToUrl(project.demo)" *ngIf="project.demo != null">Demo >><br></a>
+                    <a class="type" (click)="goToUrl(project.article)" *ngIf="project.article != null">Featured Article >></a>
+                    <span *ngIf="project.code == null && project.paper == null && project.demo == null && project.article == null"><< No source available at this time >> </span> </p>
     </article>
 </div>
