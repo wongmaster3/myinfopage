@@ -1,0 +1,102 @@
+@for (group of groups; track group.label) {
+  <section class="year-group" [attr.aria-labelledby]="'year-' + group.label">
+    <h3 class="rule-heading" [id]="'year-' + group.label">{{ group.label }}</h3>
+
+    <ul class="projects">
+      @for (project of group.projects; track project.name) {
+        <li class="project">
+          <h4 class="project__name">{{ project.name }}</h4>
+
+          <p class="project__description">{{ project.description }}</p>
+
+          @if (project.tags.length) {
+            <ul class="tags">
+              @for (tag of project.tags; track tag) {
+                <li class="tag">{{ tag }}</li>
+              }
+            </ul>
+          }
+
+          @if (project.links.length) {
+            <div class="project__links">
+              @for (link of project.links; track link.href) {
+                <!--
+                  Real anchors, unlike the 2021 version's (click)="goToUrl(...)" handlers —
+                  these are keyboard-reachable, middle-clickable, and copyable.
+                -->
+                <a
+                  class="project__link"
+                  [href]="link.href"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  [attr.aria-label]="link.label + ' — ' + project.name"
+                >
+                  <app-icon [name]="isExternal(link.href) ? 'external' : 'document'" [size]="14" />
+                  {{ link.label }}
+                </a>
+              }
+            </div>
+          } @else {
+            <p class="project__nolink">Source available on request.</p>
+          }
+        </li>
+      }
+    </ul>
+  </section>
+}
+
+@if (more.length) {
+  <section class="year-group" aria-labelledby="more-projects">
+    <h3 class="rule-heading" id="more-projects">More</h3>
+
+    <ul class="compacts">
+      @for (project of more; track project.name) {
+        <li class="compact">
+          <!--
+            Native <details> rather than a JS toggle: keyboard-operable and expandable with
+            no script, and Chrome opens a closed <details> when find-in-page matches text
+            inside it, so the descriptions stay searchable while collapsed.
+          -->
+          <details>
+            <summary class="compact__summary">
+              <span class="compact__name">{{ project.name }}</span>
+              @if (project.year) {
+                <span class="compact__year">{{ project.year }}</span>
+              }
+              <span class="compact__tags">{{ project.tags.join(' · ') }}</span>
+              <span class="compact__marker">
+                <app-icon name="chevron" [size]="14" />
+              </span>
+            </summary>
+
+            <div class="compact__body">
+              <p class="project__description">{{ project.description }}</p>
+
+              @if (project.links.length) {
+                <div class="project__links">
+                  @for (link of project.links; track link.href) {
+                    <a
+                      class="project__link"
+                      [href]="link.href"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      [attr.aria-label]="link.label + ' — ' + project.name"
+                    >
+                      <app-icon
+                        [name]="isExternal(link.href) ? 'external' : 'document'"
+                        [size]="14"
+                      />
+                      {{ link.label }}
+                    </a>
+                  }
+                </div>
+              } @else {
+                <p class="project__nolink">Source available on request.</p>
+              }
+            </div>
+          </details>
+        </li>
+      }
+    </ul>
+  </section>
+}

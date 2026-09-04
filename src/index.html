@@ -1,14 +1,42 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>PersonalWeb</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'; img-src 'self' http://* data:;" />  
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Matt Wong — Software Engineer</title>
+
+    <!--
+      Must stay a root-relative "/". The 2021 build shipped
+      <base href="https://mattwong77.info"> (absolute, no trailing slash), which made
+      the Angular router fail with "Unhandled Navigation Error" and render a blank page.
+    -->
+    <base href="/" />
+
+    <!-- user-scalable=no was removed: it blocks pinch-zoom, which is an a11y failure. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta
+      name="description"
+      content="Matt Wong — software engineer at AWS. Projects in distributed systems, graphics, and full-stack web development."
+    />
+    <link rel="canonical" href="https://mattwong77.info/" />
+
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fdfdfc" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0f1115" />
+
+    <!-- Link previews (Slack, iMessage, LinkedIn, etc.) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Matt Wong — Software Engineer" />
+    <meta
+      property="og:description"
+      content="Software engineer at AWS. Projects in distributed systems, graphics, and full-stack web development."
+    />
+    <meta property="og:url" content="https://mattwong77.info/" />
+    <meta property="og:image" content="https://mattwong77.info/assets/mattwong.jpg" />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+  <body>
+    <app-root></app-root>
+  </body>
 </html>

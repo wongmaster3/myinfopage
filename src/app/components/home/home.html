@@ -1,0 +1,115 @@
+<div class="page">
+  <header class="masthead">
+    <img
+      class="masthead__avatar"
+      [src]="profile.avatar"
+      [alt]="profile.avatarAlt"
+      width="76"
+      height="76"
+      fetchpriority="high"
+    />
+    <div>
+      <h1 class="masthead__name">{{ profile.name }}</h1>
+      <p class="masthead__tagline">{{ profile.tagline }}</p>
+    </div>
+  </header>
+
+  <nav class="linkrow" aria-label="Profiles and contact">
+    <a class="linkrow__item" [href]="profile.links.github" target="_blank" rel="noopener noreferrer">
+      <app-icon name="github" [size]="16" />
+      GitHub
+    </a>
+    <a
+      class="linkrow__item"
+      [href]="profile.links.linkedin"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <app-icon name="linkedin" [size]="16" />
+      LinkedIn
+    </a>
+    <a class="linkrow__item" [href]="profile.resume" target="_blank" rel="noopener noreferrer">
+      <app-icon name="document" [size]="16" />
+      Résumé
+    </a>
+    <a class="linkrow__item" [href]="'mailto:' + email">
+      <app-icon name="mail" [size]="16" />
+      Email
+    </a>
+  </nav>
+
+  <app-section-nav />
+
+  <main>
+    <section class="section" id="about" aria-labelledby="about-label">
+      <h2 class="section__label" id="about-label">About</h2>
+      <div class="prose">
+        @for (paragraph of profile.bio; track $index) {
+          <p>{{ paragraph }}</p>
+        }
+      </div>
+    </section>
+
+    <section class="section" id="experience" aria-labelledby="experience-label">
+      <h2 class="section__label" id="experience-label">Experience</h2>
+      <app-experience />
+    </section>
+
+    <section class="section" id="education" aria-labelledby="education-label">
+      <h2 class="section__label" id="education-label">Education</h2>
+      <ul>
+        @for (degree of profile.education; track degree.credential) {
+          <li class="education__item">
+            <div class="education__credential">{{ degree.credential }}</div>
+            <div class="education__meta">{{ degree.field }} · {{ degree.graduated }}</div>
+          </li>
+        }
+      </ul>
+    </section>
+
+    <section class="section" id="skills" aria-labelledby="skills-label">
+      <h2 class="section__label" id="skills-label">Skills</h2>
+      <!--
+        A description list: each group is a term mapped to its values. Rows are independent,
+        so a group with three skills no longer reserves the height of one with eight.
+      -->
+      <dl class="skills">
+        @for (group of profile.skills; track group.label) {
+          <dt class="skills__label">{{ group.label }}</dt>
+          <dd class="skills__items">
+            <ul class="tags">
+              @for (item of group.items; track item) {
+                <li class="tag">{{ item }}</li>
+              }
+            </ul>
+          </dd>
+        }
+      </dl>
+    </section>
+
+    <section class="section" id="projects" aria-labelledby="projects-label">
+      <h2 class="section__label" id="projects-label">Projects</h2>
+      <app-projects />
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      &copy; {{ year }} {{ profile.name }} ·
+      <a [href]="'mailto:' + email">{{ email }}</a>
+    </div>
+    <div class="footer__social">
+      <a
+        [href]="profile.links.linkedin"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn"
+      >
+        <app-icon name="linkedin" [size]="18" />
+      </a>
+      <a [href]="profile.links.github" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <app-icon name="github" [size]="18" />
+      </a>
+    </div>
+  </footer>
+</div>

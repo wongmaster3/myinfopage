@@ -1,0 +1,35 @@
+<ol class="roles">
+  @for (role of roles; track role.org + role.period) {
+    <li class="role">
+      <h3 class="role__title">{{ role.title }}</h3>
+      <p class="role__meta">{{ role.org }} · {{ role.period }}</p>
+
+      <ul class="role__highlights">
+        @for (highlight of role.highlights; track $index) {
+          <li>
+            {{ highlight.text }}
+            @if (highlight.link) {
+              <a
+                class="role__link"
+                [href]="highlight.link.href"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <app-icon name="external" [size]="14" />
+                {{ highlight.link.label }}
+              </a>
+            }
+          </li>
+        }
+      </ul>
+
+      @if (role.tags.length) {
+        <ul class="tags">
+          @for (tag of role.tags; track tag) {
+            <li class="tag">{{ tag }}</li>
+          }
+        </ul>
+      }
+    </li>
+  }
+</ol>

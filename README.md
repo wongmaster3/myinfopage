@@ -1,28 +1,48 @@
-# Myinfopage
+# myinfopage
 
-## Development server
+Personal website — [mattwong77.info](https://mattwong77.info/)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Angular 20, single page, no CSS framework. All copy lives in data files, so updating the
+site does not mean touching markup:
 
-## Build
-The following steps assume we are using github pages.
-1. First we need to build the application. Run:
+| File | What it holds |
+| --- | --- |
+| `src/app/data/profile.ts` | Name, tagline, bio, education, skills, links, email |
+| `src/app/data/experience.ts` | Work history |
+| `src/app/data/projects.ts` | The project list, with tags and links |
+| `src/styles.css` | The whole design system — colors, type scale, spacing, layout |
+
+## Running it
+
+Requires Node 20.19+, 22.12+, or 24+.
 
 ```bash
-ng build --prod --base-href "https://mattwong77.info"
+npm install
+npm start          # dev server on http://localhost:4200
+npm run build      # production build into dist/myinfopage/browser
+npm test           # unit tests, watch mode
+npm run test:ci    # unit tests, headless, single run
 ```
 
-2. Next we need to push the built project to another branch called ```gh-pages``` by running:
+## Deploying
 
-```bash
-npx angular-cli-ghpages —-dir=dist/myinfopage
-```
+Pushing to `master` runs `.github/workflows/deploy.yml`, which tests, builds, and publishes
+to GitHub Pages. The repo's Pages source must be set to **GitHub Actions** (Settings →
+Pages), not "Deploy from a branch".
 
-3. Go to Github > Settings > Pages. Make sure the ```Source``` has the branch ```gh-pages``` and the folder as ```root```. Also add the custom domain name and enable https.
+## Design notes
 
-Reference: [Launch Angular App to Github Pages Tutorial](https://medium.com/tech-insights/how-to-deploy-angular-apps-to-github-pages-gh-pages-896c4e10f9b4)
+- Light and dark themes come from `prefers-color-scheme` — no toggle, no JavaScript.
+- Icons are inline SVG (`src/app/shared/icon.ts`) rather than an icon font.
+- `featured: true` projects get a full entry under their year heading; the rest become
+  `<details>` rows under "More", so they work without JavaScript and Chrome reveals them on
+  find-in-page.
+- The section nav (`src/app/components/section-nav/`) is one component with two CSS
+  presentations: a vertical rail at ≥68rem, a sticky bar below that. Links are plain
+  anchors; the observer only adds the active highlight, and the rule for which section is
+  active lives in `src/app/shared/active-section.ts` as a pure function so it can be tested
+  without a viewport.
 
-## Credits
-Credits to https://html5up.net/ for the design
-Credits to https://unsplash.com for the nice picture.
-
+Rebuilt September 2026, replacing an Angular 12 site on the HTML5 UP "Strata" template.
+That version dropped ~7 MB of unused payload (FontAwesome webfonts, unreferenced photos,
+jQuery, Bootstrap, Angular Material); initial transfer is now ~69 kB.
